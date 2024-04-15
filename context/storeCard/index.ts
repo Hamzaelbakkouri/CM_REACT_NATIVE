@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { Card, Product } from "../../types/index";
+import { Card, Product } from "../../types";
 
 type CardState = {
   productsOfcards: Card[];

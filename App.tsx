@@ -1,24 +1,33 @@
-import {Text} from 'react-native';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { StyleSheet, View } from 'react-native';
+// import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import React from 'react';
-import "react-native-gesture-handler";
+import { Provider } from 'react-redux';
+import { store } from './context/store';
+import ProductCards from './components/productsCards';
+import SearchInput from './components/inputSearch';
+import Products from './components/productsList';
 
 
-export default function App(): React.JSX.Element  {
+export default function App(): React.JSX.Element {
 
   return (
-    <>
-      <GestureHandlerRootView>
-      <Text>allooooo</Text>
-      <Text>allooooo</Text>
-      <Text>allooooo</Text>
-      <Text>allooooo</Text>
-      <Text>allooooo</Text>
-      <Text>allooooo</Text>
-      <Text>allooooo</Text>
-      <Text>allooooo</Text>
-      <Text>allooooo</Text>
-    </GestureHandlerRootView>
-    </>
+    <Provider store={store}>
+      <View style={styles.container}>
+        <ProductCards />
+        <SearchInput />
+        <Products />
+      </View>
+    </Provider>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "black",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "100%",
+    padding: 10,
+  },
+});
