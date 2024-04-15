@@ -1,5 +1,4 @@
 import { StyleSheet, View } from 'react-native';
-// import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from './context/store';

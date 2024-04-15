@@ -7,7 +7,7 @@ import axios from "axios";
 export const getProducts = createAsyncThunk<Product[], string>(
   "product/getProducts",
   async (value: string) => {
-    const { data } = await axios.get("http://192.168.56.1:3000/products" + value, {
+    const { data } = await axios.get("https://mocki.io/v1/a4d535bf-1243-41c7-bd06-564c43d913e3?product_name_like=" + value, {
       timeout: 10000,
     });
     return data;
