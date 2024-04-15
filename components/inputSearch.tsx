@@ -5,11 +5,10 @@ import { useState } from "react";
 
 export default function SearchInput() {
   const dispatch = useAppDispatch();
-  const [search, setSearch] = useState("" as string);
+  const [search, setSearch] = useState<string>("");
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
-        {/* <Icon name="search" size={20} color="gray" style={{}} /> */}
         <TextInput
           placeholder="Chercher un produit"
           onChange={(e) => {
